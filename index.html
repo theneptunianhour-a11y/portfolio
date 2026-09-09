@@ -17,6 +17,7 @@
     --pink-soft:#FFD6EC;
     --teal:#0B4F52;
     --teal-light:#1E9C90;
+    --teal-soft:#D3EAE6;
     --lav:#A98CFF;
     --line: rgba(24,26,30,0.14);
     --serif: "Times New Roman", Times, serif;
@@ -288,6 +289,54 @@
   .browser-body h3{font-family:var(--serif); font-size:21px; font-weight:600; line-height:1.25; margin:0 0 12px;}
   .browser-body .src{font-size:12px; color:var(--pink); font-weight:600; letter-spacing:0.02em;}
 
+  /* ---------- case study ---------- */
+  .casestudy{padding:24px 0;}
+  .section-icon{width:22px; height:22px; color:var(--teal); flex:0 0 auto; margin-left:-2px;}
+  .case-card{max-width:760px; margin-top:6px;}
+  .case-subtitle{
+    font-family:var(--display); font-weight:600; font-size:11px; letter-spacing:0.14em;
+    text-transform:uppercase; color:var(--pink); margin:-4px 0 8px;
+  }
+  .case-title{font-family:var(--serif); font-weight:600; font-size:28px; line-height:1.2; margin:0 0 30px; color:var(--ink);}
+
+  .case-stack{display:flex; flex-direction:column;}
+  .case-layer{
+    position:relative;
+    border-radius:4px 20px 16px 16px;
+    padding:36px 28px 28px;
+    margin-top:28px;
+    box-shadow:0 18px 32px -24px rgba(24,26,30,0.4);
+  }
+  .case-layer p{font-size:15.5px; line-height:1.7; margin:0; max-width:64ch;}
+  .case-layer p b{font-weight:700;}
+  .case-layer-tab{
+    position:absolute; top:-20px; height:36px; padding:0 20px;
+    display:flex; align-items:center;
+    font-family:var(--display); font-weight:700; font-size:12px; letter-spacing:0.08em;
+    border-radius:9px 9px 0 0; white-space:nowrap;
+  }
+  .tab-left{left:24px;}
+  .tab-right{right:24px;}
+
+  .layer-client{background:var(--cream-deep);}
+  .layer-client .case-layer-tab{background:var(--cream-deep); color:var(--ink);}
+  .layer-ask{background:var(--pink-soft);}
+  .layer-ask .case-layer-tab{background:var(--pink-soft); color:var(--ink);}
+  .layer-did{background:var(--teal-soft);}
+  .layer-did .case-layer-tab{background:var(--teal-soft); color:var(--teal);}
+  .layer-results{background:var(--pink); color:#fff;}
+  .layer-results .case-layer-tab{background:var(--pink); color:#fff;}
+
+  .case-list{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:14px; max-width:64ch;}
+  .case-list li{position:relative; padding-left:22px; font-size:15px; line-height:1.65;}
+  .case-list li::before{content:"—"; position:absolute; left:0; top:0; color:var(--teal); font-weight:700;}
+  .case-list li b{font-weight:700;}
+
+  .case-results{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:16px; max-width:520px;}
+  .case-stat{background:rgba(255,255,255,0.16); border:1px solid rgba(255,255,255,0.35); border-radius:10px; padding:20px 16px; text-align:center;}
+  .case-stat b{display:block; font-family:var(--serif); font-weight:600; font-size:26px; color:#fff; margin-bottom:6px;}
+  .case-stat span{font-size:12.5px; line-height:1.4; color:rgba(255,255,255,0.9); display:block;}
+
   /* ---------- tools ---------- */
   .tools{padding:24px 0;}
   .tool-grid{
@@ -336,6 +385,7 @@
       <a href="#neptune">neptune</a>
       <a href="#dreamy">dreamy reality</a>
       <a href="#articles">articles</a>
+      <a href="#casestudy">case study</a>
       <a href="#platforms">platforms</a>
       <a href="#tools">tools</a>
       <a href="#contact">contact</a>
@@ -375,9 +425,10 @@
             <a href="#neptune"><b>03</b> neptune social studio</a>
             <a href="#dreamy"><b>04</b> the dreamy reality</a>
             <a href="#articles"><b>05</b> articles</a>
-            <a href="#platforms"><b>06</b> platforms</a>
-            <a href="#tools"><b>07</b> tools</a>
-            <a href="#contact"><b>08</b> contact</a>
+            <a href="#casestudy"><b>06</b> case study</a>
+            <a href="#platforms"><b>07</b> platforms</a>
+            <a href="#tools"><b>08</b> tools</a>
+            <a href="#contact"><b>09</b> contact</a>
           </div>
         </div>
       </div>
@@ -391,7 +442,7 @@
       <div class="section-head"><span class="washi"></span><span class="section-num">01</span><h2>a little bit about me</h2></div>
       <div class="about-grid">
         <div>
-          <p>Hi! I'm Jocelyne! I'm a Canadian social media manager, content creator, and former UGC creator.</p>
+          <p>Hi, I'm Jocelyne! I'm a Canadian social media manager, content creator and former UGC creator.</p>
           <p>I've been working in social media, marketing, and content creation since June 2023. I currently operate under my agency, Neptune Social Studio, as a consultant, and under a pseudonym on my personal page, the dreamy reality.</p>
           <p>As a UGC creator, I collaborated with brands like Mediheal, Purito, Torriden and many others. As a social media manager, consultant and strategist, I focus on seeing the bigger picture when it comes to social media. Many of what we experience online is deeply connected to culture, society and politics and I aim to discover the right strategy for my clients long-term.</p>
           <p>I spend a lot of time on social media platforms, learning, observing and researching culture and how human beings show desire and how the world around us affects our decisions and what we value.</p>
@@ -476,7 +527,7 @@
 
     <!-- DREAMY REALITY VIDEOS -->
     <section class="videos" id="dreamy">
-      <div class="section-head"><span class="section-num">04</span><h2>some videos from the dreamy reality</h2></div>
+      <div class="section-head"><span class="section-num">04</span><h2>videos from the dreamy reality</h2></div>
       <div class="videos-head">
         <p class="persona-note">Mindset, spiritual &amp; esoteric content, posted as @thedreamyreality.</p>
         <a class="tiktok-link" href="https://www.tiktok.com/@thedreamyreality" target="_blank" rel="noopener">link to TikTok page</a>
@@ -526,9 +577,57 @@
 
     <hr class="rule">
 
+    <!-- CASE STUDY -->
+    <section class="casestudy" id="casestudy">
+      <div class="section-head">
+        <span class="section-num">06</span>
+        <h2>case study</h2>
+        <svg class="section-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M3 7.2C3 6.24 3.78 5.5 4.7 5.5H9.3L11.1 7.4H19.3C20.24 7.4 21 8.16 21 9.1V17.3C21 18.24 20.24 19 19.3 19H4.7C3.78 19 3 18.26 3 17.3V7.2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M3 9.6H21" stroke="currentColor" stroke-width="1.6"/>
+        </svg>
+      </div>
+
+      <div class="case-card">
+        <p class="case-subtitle">Client Platforms · Twitter · TikTok · YouTube</p>
+        <h3 class="case-title">Esoteric &amp; Spiritual Coaching Business</h3>
+
+        <div class="case-stack">
+          <div class="case-layer layer-client">
+            <span class="case-layer-tab tab-left">The Client</span>
+            <p>A content creator and spiritual coach who built a platform on Twitter, TikTok and YouTube, offering spiritual and esoteric services such as spells, mindset coaching and tarot readings.</p>
+          </div>
+
+          <div class="case-layer layer-ask">
+            <span class="case-layer-tab tab-right">The Ask</span>
+            <p>The client struggled with finding the right audience. Most of what they posted would go directly to people who consumed the content but never booked any of the offered services. The request was to find the right audience that could be moved further down the sales funnel and get bookings in an oversaturated industry.</p>
+          </div>
+
+          <div class="case-layer layer-did">
+            <span class="case-layer-tab tab-left">What We Did</span>
+            <ul class="case-list">
+              <li><b>Audience Refine:</b> shifted the messaging from broad entertainment (e.g., general tarot) to more authority-based and educational content (e.g., mindset and frameworks) to attract serious buyers.</li>
+              <li><b>Funnel Redesign:</b> created a clear ladder — free content → Patreon → 1-on-1 coaching.</li>
+              <li><b>Intake Screening:</b> added qualification questionnaires to booking links to screen out viewers that weren't serious about booking.</li>
+            </ul>
+          </div>
+
+          <div class="case-layer layer-results">
+            <span class="case-layer-tab tab-right">The Results</span>
+            <div class="case-results">
+              <div class="case-stat"><b>+180%</b><span>increase in coaching booking requests</span></div>
+              <div class="case-stat"><b>+42%</b><span>conversion rate from casual viewers to dedicated subscribers</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule">
+
     <!-- PLATFORMS -->
     <section class="tools" id="platforms">
-      <div class="section-head"><span class="section-num">06</span><h2>platforms I've used</h2></div>
+      <div class="section-head"><span class="section-num">07</span><h2>platforms I've used</h2></div>
       <div class="tool-grid cols-4">
         <div class="tool"><div class="tool-badge" style="background:linear-gradient(135deg,#F09433,#E6683C,#DC2743,#CC2366,#BC1888);"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.6" fill="#fff" stroke="none"/></svg></div><div class="tool-name">Instagram</div></div>
         <div class="tool"><div class="tool-badge" style="background:#1877F2;"><svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><path d="M14.5 8.5H16V5.6c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.3H7.4v3.3h2.4V21h3.4v-5.9h2.4l.4-3.3h-2.8V9.7c0-.9.3-1.2 1.5-1.2z"/></svg></div><div class="tool-name">Facebook</div></div>
@@ -545,7 +644,7 @@
 
     <!-- TOOLS -->
     <section class="tools" id="tools">
-      <div class="section-head"><span class="section-num">07</span><h2>tools I've used</h2></div>
+      <div class="section-head"><span class="section-num">08</span><h2>tools I've used</h2></div>
       <div class="tool-grid">
         <div class="tool"><div class="tool-badge" style="background:var(--teal);"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7"><path d="M7 14c-1.7 0-3-1.8-3-4s1.3-4 3-4c2 0 3 2.5 5 2.5s3-2.5 5-2.5c1.7 0 3 1.8 3 4s-1.3 4-3 4c-2 0-3-2.5-5-2.5s-3 2.5-5 2.5z"/></svg></div><div class="tool-name">Meta Business Suite</div></div>
         <div class="tool"><div class="tool-badge" style="background:var(--lav);"><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M12 3c.6 3.4 2.6 5.4 6 6-3.4.6-5.4 2.6-6 6-.6-3.4-2.6-5.4-6-6 3.4-.6 5.4-2.6 6-6z"/></svg></div><div class="tool-name">Google Gemini</div></div>
@@ -564,12 +663,12 @@
 
     <!-- CONTACT -->
     <section class="contact" id="contact">
-      <div class="section-head"><span class="washi"></span><span class="section-num">08</span><h2>contact</h2></div>
+      <div class="section-head"><span class="washi"></span><span class="section-num">09</span><h2>contact</h2></div>
       <div class="contact-grid">
         <a class="contact-row" href="mailto:jocelynejeyapal@gmail.com"><span class="k">email</span> jocelynejeyapal@gmail.com</a>
         <a class="contact-row" href="https://www.instagram.com/neptunesocialstudio" target="_blank" rel="noopener"><span class="k">instagram</span> @neptunesocialstudio</a>
         <a class="contact-row" href="https://neptunesocialstudio.com" target="_blank" rel="noopener"><span class="k">website</span> neptunesocialstudio.com</a>
-        <a class="contact-row" href="https://www.linkedin.com/in/jocelyne-j-575b582a4/" target="_blank" rel="noopener"><span class="k">linkedin</span> jocelyne jeyapal</a>
+        <a class="contact-row" href="https://www.linkedin.com/in/jocelyne-jeyapal" target="_blank" rel="noopener"><span class="k">linkedin</span> jocelyne jeyapal</a>
         <a class="contact-row" href="https://www.tiktok.com/@neptunesocialstudio" target="_blank" rel="noopener"><span class="k">tiktok</span> @neptunesocialstudio</a>
         <a class="contact-row" href="https://www.tiktok.com/@thedreamyreality" target="_blank" rel="noopener"><span class="k">tiktok</span> @thedreamyreality</a>
       </div>
